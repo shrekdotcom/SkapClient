@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <title>SkapClient</title>
+        
+        <link rel="icon" href="skap.ico" />
+        
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Russo One" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tahoma" />
-        <link rel="icon" href="skap.ico" />
-        <meta charset="utf8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="A Client for skap.io. Higher fps, HTML chat and more!">
+
+            
+     <meta name="escription" content="A Client for skap.io. Higher fps, HTML chat and more!">
         <!-- Discord Embed -->
         <meta content="SkapClient" property="og:title">
         <meta content="SkapClient - Made by NKY#5223" property="og:description">
@@ -20,14 +25,26 @@
         <h2 id="connecting">Connecting...</h2>
 
         <div id="loginDiv" class="hidden">
-            <h1 id="logo">Skap Client<span id="scuffed">Scuffed</span><span id="hacked">>hacked</span></h1>
-            <p id="update">
-                Emojis: please activate at <a href="settings" target="_blank" style="color:#0000ff;">settings</a><br>
-                <a href="https://forms.gle/p9nMCtC5DQwSxrAp6" target="_blank" style="color:#0000ff;">Suggest Emojis</a><br>
-                <a href="https://forms.gle/BPFTwWJGnsNYF6Vg7" target="_blank" style="color:#0000ff;">What do you think of SkapClient?</a>
-            </p>
-            <br>
-            <div id="loginData">
+            <h1 id="logo" class="logo">
+            	Skap Client
+            	<span id="scuffed">Not Scuffed</span>
+            	<!--<span id="hacked">>hacked</span>-->
+            </h1>
+            <p id="splashText">
+                Emojis: please activate at <a href="settings" target="_blank">settings</a><br>
+                <a href="https://forms.gle/p9nMCtC5DQwSxrAp6" target="_blank">Suggest Emojis</a><br>
+                <a href="https://forms.gle/BPFTwWJGnsNYF6Vg7" target="_blank">What do you think of SkapClient?</a>
+            </p>		<br>
+						<div class="Login" id="loginForm" action="javascript:void(0)" method="POST">
+								<form method="post">
+										<input id="username" type="text" placeholder="Username" autocomplete="username" required="required" />
+										<input id="password" type="password" placeholder="Password" autocomplete="current-password" required="required" />
+										<button id="guest" type="submit" class="btn"><span>Guest</span></button>
+										<button id="login" form="loginForm" type="submit" class="btn"><span>Login</span></button>
+										<button id="register" form="loginForm" type="submit" class="btn"><span>Register</span></button>
+								</form>
+						</div>
+<!--            <div id="loginData">
                 <form id="loginForm" action="javascript:void(0)" method="post">
                     <input id="username" class="inputs" value="" placeholder="Username" autocomplete="username"><br>
                     <input id="password" type="password" class="inputs" value="" placeholder="Password" autocomplete="current-password">
@@ -36,7 +53,7 @@
                 <button id="guest">Guest</button>
                 <button id="login" form="loginForm">Login</button>
                 <button id="register" form="loginForm">Register</button>
-            </div>
+            </div> -->
             <div id="changingRoom" class="hidden">
                 <button id="backToLogout">Back</button>
                 <label for="playerColor">Color: </label>
@@ -65,7 +82,8 @@
                 <a href="https://discord.gg/NsmaBUb" target="_blank" title="Join the Discord">
                     <img src="discord.png" width="50" height="50" />
                 </a>
-                <button id="changelogBtn">Changelog</button>
+                <button id="changelogBtn" class="btn"><span>Changelog</span></button>
+
             </div>
             <!-- CHANGELOG -->
             <div id="changelog" class="hidden">
@@ -273,7 +291,7 @@
                 <input type="text" name="gamePw" id="gamePw" placeholder="Password" />
             </div>
             <br>
-            <label for="powerRestrict" class="switchLabel" class="hidden">
+            <label for="powerRestrict"  hiddencel" class="hidden">
                 Restrict powers?
                 <input type="checkbox" name="powerRestrict" id="powerRestrict" class="hidden" />
                 <span class="switch"></span>
